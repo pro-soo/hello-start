@@ -4,10 +4,12 @@ import hello.hellostart.domain.Member;
 import hello.hellostart.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional  // jpa 쓰려면 필요하다.
 //@Service -> Java 설정파일 없으면, Annotation 등록 해줘야 동작
 public class MemberService {
     //@Autowired    1. 필드 주입 -> 좋은 기능은 X
