@@ -24,11 +24,11 @@ public class MemberService {
 
     // 회원가입
     public Long join(Member member){
-        // 같은 이름이 있는 중복 회원X, Optional이라 가능
-        validateDuplicateMember(member);
 
-        memberRepository.save(member);
-        return member.getId();
+            // 같은 이름이 있는 중복 회원X, Optional이라 가능
+            validateDuplicateMember(member);
+            memberRepository.save(member);
+            return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {   // 메소드 따로 빼기, ctrl+alt+shift+ T
